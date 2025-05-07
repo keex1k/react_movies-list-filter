@@ -8,10 +8,7 @@ export const App: React.FC = () => {
 
   const filteredMovies = [...moviesFromServer].filter(
     movie =>
-      movie.title
-        .toLowerCase()
-        .trim()
-        .includes(query.toLowerCase().trim()) ||
+      movie.title.toLowerCase().trim().includes(query.toLowerCase().trim()) ||
       movie.description
         .toLowerCase()
         .trim()
