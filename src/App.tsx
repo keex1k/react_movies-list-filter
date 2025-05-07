@@ -9,13 +9,13 @@ export const App: React.FC = () => {
   const filteredMovies = [...moviesFromServer].filter(
     movie =>
       movie.title
-        .toLocaleLowerCase()
+        .toLowerCase()
         .trim()
-        .includes(query.toLocaleLowerCase().trim()) ||
+        .includes(query.toLowerCase().trim()) ||
       movie.description
-        .toLocaleLowerCase()
+        .toLowerCase()
         .trim()
-        .includes(query.toLocaleLowerCase().trim()),
+        .includes(query.toLowerCase().trim()),
   );
 
   return (
